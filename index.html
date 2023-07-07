@@ -1,6 +1,12 @@
 <html>
   <header>
     <title>Seiryu</title>
+    <meta name="Description" content="Main Website of Seiryu Executor" />
+    <meta property="og:title" content="Seiryu Executor" />
+    <meta
+      property="og:image"
+      content="https://cdn.discordapp.com/attachments/1100001979364802622/1116278149873930303/men.jpg"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -23,7 +29,7 @@
         <svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
-          class="bob"
+          class="bob reveal"
         >
           <path
             fill="rgb(51, 228, 189)"
@@ -31,25 +37,25 @@
             transform="translate(100 100)"
           />
         </svg>
-        <img src="img/Seiryu_Logo.png" class="logo" />
+        <img src="img/Seiryu_Logo.png" class="logo reveal" />
         <div class="grid">
-          <div class="panel">
-            <i class="fa-solid fa-bolt thing"></i>
+          <div class="panel reveal">
+            <i class="fa-solid fa-bolt thing reveal"></i>
             <p class="panel-title"><b>Injection Speed</b></p>
             <p class="panel-desc">35 - 100ms</p>
           </div>
-          <div class="panel">
-            <i class="fa-solid fa-feather thing"></i>
+          <div class="panel reveal">
+            <i class="fa-solid fa-feather thing reveal"></i>
             <p class="panel-title"><b>Interface</b></p>
             <p class="panel-desc">Simple - Effective</p>
           </div>
-          <div class="panel">
-            <i class="fa-solid fa-layer-group thing"></i>
+          <div class="panel reveal">
+            <i class="fa-solid fa-layer-group thing reveal"></i>
             <p class="panel-title"><b>Injection</b></p>
             <p class="panel-desc">Using Multiple Api</p>
           </div>
-          <div class="panel">
-            <i class="fa-solid fa-cloud thing"></i>
+          <div class="panel reveal">
+            <i class="fa-solid fa-cloud thing reveal"></i>
             <p class="panel-title"><b>ScriptHub</b></p>
             <p class="panel-desc">Using Scriptblox</p>
           </div>
@@ -69,11 +75,16 @@
           >
             Features
           </button>
-          <button class="NavChild NavButton">Download</button>
+          <button
+            class="NavChild NavButton"
+            onclick="scrollToSection('DownloadClass')"
+          >
+            Installation
+          </button>
           <button class="NavChild NavButton">Discord</button>
         </div>
         <div class="middle">
-          <p class="desc">
+          <p class="desc reveal">
             Get more than an executor. <b class="Seiryu">Get Seiryu.</b>
           </p>
           <p>
@@ -84,14 +95,14 @@
             <i class="fa-solid fa-dragon"></i> Learn more!
           </button>
           <div class="AboutContainer">
-            <b class="About Lable">About</b>
+            <b class="About Lable reveal">About</b>
             <h1>
-              <b
+              <b class="reveal"
                 >What is <b class="Seiryu">Seiryu</b>? Get to know your next
                 executor. 😉</b
               >
             </h1>
-            <p>
+            <p class="reveal">
               <b>Introducing Seiryu</b>, the ultimate Roblox exploit
               meticulously crafted by our team of developers. Unleash the power
               of Lego hacking with Seiryu and elevate your cheating experience
@@ -99,17 +110,17 @@
             </p>
           </div>
           <div class="FeatureContainer">
-            <b class="Feature Lable">Features</b>
-            <h1>
+            <b class="Feature Lable reveal">Features</b>
+            <h1 class="reveal">
               <b>Loaded With Amazing Features. 🚀</b>
             </h1>
-            <p>
+            <p class="reveal">
               <b>Seiryu</b> with features ranging from lightning fast injection
               to even getting thousands of scripts - all from a mouse click. We
               guarantee a smooth experience from any device that is supported
             </p>
             <button
-              class="OutLinedButton"
+              class="OutLinedButton reveal"
               onclick="scrollToSection('DownloadClass')"
             >
               I'm hard now <i class="fa-solid fa-turn-down"></i>
@@ -118,10 +129,12 @@
         </div>
       </div>
       <div class="DownloadBack">
-        <b class="DownloadClass Lable">Download</b>
-        <h1 class="quotething">It's "Seiryously" the best!</h1>
-        <h1 class="quote">Get it? <b class="Seiryu">Get Seiryu</b>. 😎</h1>
-        <button class="OutLinedButton">Install</button>
+        <b class="DownloadClass Lable reveal">Download</b>
+        <h1 class="quotething reveal">It's "Seiryously" the best!</h1>
+        <h1 class="quote reveal">
+          Get it? <b class="Seiryu">Get Seiryu</b>. 😎
+        </h1>
+        <button class="OutLinedButton reveal">Install</button>
       </div>
     </div>
     <script>
@@ -129,6 +142,23 @@
         const section = document.querySelector("." + sectionClass);
         section.scrollIntoView({ behavior: "smooth" });
       }
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
     </script>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>

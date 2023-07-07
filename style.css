@@ -116,6 +116,7 @@ html {
 }
 .OutLinedButton:hover {
   transform: translateY(-6px);
+   background-color: rgba(75, 165, 137, 0.699);
 }
 
 .fa-solid {
@@ -238,6 +239,17 @@ html {
 .quote {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.reveal{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1445px) {
