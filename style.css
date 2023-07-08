@@ -116,7 +116,7 @@ html {
 }
 .OutLinedButton:hover {
   transform: translateY(-6px);
-   background-color: rgba(75, 165, 137, 0.699);
+  background-color: rgba(75, 165, 137, 0.699);
 }
 
 .fa-solid {
@@ -240,19 +240,22 @@ html {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(100px);
   opacity: 0;
   transition: 1s all ease;
 }
 
-.reveal.active{
+.reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
 
 @media only screen and (max-width: 1445px) {
+  .NavBar {
+    overflow: hidden;
+  }
   .right {
     display: none;
   }
