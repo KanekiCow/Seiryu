@@ -2,10 +2,11 @@ html {
   background-color: #000014;
   font-family: "Poppins";
   position: relative;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
+
 #particles-js {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -13,20 +14,22 @@ html {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  position: fixed;
   z-index: -1;
 }
+
 .BlurBackground {
   width: 100%;
   height: 250%;
   backdrop-filter: blur(10px);
 }
+
 .NavBar {
   display: flex;
   flex-direction: row;
 }
+
 .Left {
-  display: felx;
+  display: flex;
   flex-direction: column;
   height: 100%;
   width: 40%;
@@ -35,31 +38,32 @@ html {
 }
 
 .Right {
-  align-items: flex-end;
-  justify-content: flex-end;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
   float: right;
 }
+
 .BoldButton {
   margin: 20px;
   font-size: large;
-  color: rgb(255, 255, 255);
-
+  color: #fff;
   background-color: rgb(47, 184, 165);
-  border: 0px;
+  border: none;
   padding: 8px;
   width: 180px;
   height: 45px;
   border-radius: 10px;
-  transition: cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition-duration: 0.5s;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
+
 .BoldButton:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 10px 1px rgb(0, 255, 234);
   background-color: rgb(52, 207, 186);
 }
+
 .BoldButton:active {
   transform: scale(0.99);
 }
@@ -68,52 +72,60 @@ html {
   margin-left: 50px;
   font-size: 40px;
 }
+
 .dot {
   color: aquamarine;
   font-size: 40px;
 }
+
 .NavButton {
   margin-left: 20px;
   margin-top: 5px;
-  border: 0px;
-  color: rgb(255, 255, 255);
+  border: none;
+  color: #fff;
   background-color: transparent;
   font-size: 17px;
-  transition: cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition-duration: 0.5s;
+  transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+    text-shadow 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
+
 .NavButton:hover {
   color: aquamarine;
   text-shadow: 0 0 10px rgba(52, 207, 194, 0.7);
 }
+
 .desc {
-  font-size: 35px;
+  font-size: 40px;
 }
+
 .Seiryu {
   background: linear-gradient(to bottom, aquamarine, #445e57);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .middle {
   margin: 50px;
 }
+
 .desc {
   margin-top: -10px;
 }
+
 .OutLinedButton {
   box-shadow: 0 0 10px 1px rgb(91, 184, 153);
   margin-top: 30px;
   font-size: large;
-  color: rgb(255, 255, 255);
+  color: #fff;
   background-color: rgba(62, 139, 114, 0.699);
   border: 2px solid rgb(101, 206, 171);
   padding: 8px;
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  transition: cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition-duration: 0.5s;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
+
 .OutLinedButton:hover {
   transform: translateY(-6px);
   background-color: rgba(75, 165, 137, 0.699);
@@ -122,6 +134,7 @@ html {
 .fa-solid {
   font-size: 15px;
 }
+
 .ui {
   margin-right: 100px;
   margin-top: 130px;
@@ -133,6 +146,7 @@ html {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   backdrop-filter: blur(10px);
 }
+
 @keyframes ui {
   0% {
     transform: perspective(1000px) rotateX(10deg) rotateY(-15deg)
@@ -147,10 +161,12 @@ html {
       scale3d(1, 1, 1) translateY(0);
   }
 }
+
 .AboutContainer {
   margin-top: 500px;
 }
-.Lable {
+
+.Label {
   padding: 5px;
   background-color: #4d4d4d93;
   border-radius: 10px;
@@ -159,6 +175,7 @@ html {
 .bob {
   margin-top: 100px;
 }
+
 .logo {
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
@@ -170,9 +187,11 @@ html {
   margin-top: -700px;
   height: 300px;
 }
+
 .FeatureContainer {
   margin-top: 300px;
 }
+
 .panel {
   display: flex;
   flex-direction: column;
@@ -185,18 +204,19 @@ html {
   justify-content: center;
   margin-left: 20px;
   backdrop-filter: blur(10px);
-  transition: cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition-duration: 0.3s;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   border-radius: 10px;
 }
 
 .panel-title {
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
+
 .panel:hover {
   transform: translateY(-6px);
 }
+
 .thing {
   background: linear-gradient(to bottom, rgb(6, 223, 150), rgb(34, 70, 60));
   -webkit-background-clip: text;
@@ -206,23 +226,27 @@ html {
 }
 
 .panel-desc {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
 .panel-title {
   margin-top: 5px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
+
 .grid {
   margin-right: 100px;
   margin-top: 400px;
   display: flex;
   justify-content: space-between;
 }
+
 .bottom_ {
   background-color: rgba(24, 24, 24, 0.5);
   backdrop-filter: blur(10px);
 }
+
 .DownloadBack {
   width: 100%;
   height: 50%;
@@ -233,18 +257,31 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .quotething {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
+
 .quote {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
 .reveal {
   position: relative;
   transform: translateY(100px);
   opacity: 0;
-  transition: 1s all ease;
+  transition: all 1s ease;
+}
+
+.fade {
+  position: relative;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.fade.active {
+  opacity: 0;
 }
 
 .reveal.active {
@@ -256,7 +293,7 @@ html {
   .NavBar {
     overflow: hidden;
   }
-  .right {
+  .Right {
     display: none;
   }
   .Left {
